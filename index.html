@@ -22,7 +22,8 @@
             experties: ["experties"],
             git_repos: ["under_dev"],
             interests: ["interests"],
-            games: ["under_dev"]
+            games: ["under_dev"],
+            certificates: ["certificates"]
         }
 
         window.addEventListener('load', () => {
@@ -38,6 +39,7 @@
             document.getElementById("bt_git_repos").onclick = function() {git_repos()};
             document.getElementById("bt_interests").onclick = function() {interests()};
             document.getElementById("bt_games").onclick = function() {games()};
+            document.getElementById("bt_certificates").onclick = function() {certificates()};
 
             function display(dev_names_key) {
                 // hide other devs with different dev name
@@ -105,6 +107,12 @@
                 display("games");
             }
 
+            /* show certificates cards*/
+            function certificates() {
+                document.getElementById("header_text").innerHTML = "Certificates";
+                display("certificates");
+            }
+
 
         });
     </script>
@@ -138,6 +146,9 @@
                 </div>
                 <div class="col my-3" id="button_3_1">
                     <button type="button" class="btn btn-primary" id="bt_games">games</button>
+                </div>
+                <div class="col my-3" id="button_3_2">
+                    <button type="button" class="btn btn-primary" id="bt_certificates">certificates</button>
                 </div>
             </div>
         </div>
@@ -381,8 +392,29 @@
             
         </div>
 
-        <!-- <div class="container" id="certificates">
+        <div class="container" id="certificates">
             <div class="row my-3">
+
+                <div class="col mx-3 my-3" style="min-width: 14rem; max-width: 28rem;">
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col">
+                                <img src="https://s3.amazonaws.com/coursera_assets/meta_images/generated/CERTIFICATE_LANDING_PAGE/CERTIFICATE_LANDING_PAGE~GV59TP5ZG852/CERTIFICATE_LANDING_PAGE~GV59TP5ZG852.jpeg" class="img-fluid rounded-start" alt="...">
+                            </div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col">
+                                <div class="card-body">
+                                    <h5 class="card-title">Object-Oriented Data Structures in C++</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">by University of Illinois at Urbana-Champaign</h6>
+                                    <p class="card-text">
+                                        This course teaches learners how to write a program in the C++ language, including how to set up a development environment for writing and debugging C++ code and how to implement data structures as C++ classes. It is the first course in the Accelerated CS Fundamentals specialization, and subsequent courses in this specialization will be using C++ as the language for implementing the data structures covered in class.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="col mx-3 my-3" style="min-width: 14rem; max-width: 28rem;">
                     <div class="card mb-3">
@@ -404,12 +436,8 @@
                     </div>
                 </div>
 
-                <div class="col mx-3 my-3" style="min-width: 14rem; max-width: 28rem;">
-                    
-                </div>
-
             </div>
-        </div> -->
+        </div>
 
         <div class="container" id="experties">
             <div class="row my-3">
